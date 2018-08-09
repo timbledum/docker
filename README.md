@@ -1,2 +1,3 @@
-# dockher
-Getting a good fit – space style
+# Dock'er
+
+Getting a good fit – space style.
