@@ -12,12 +12,12 @@ from random import randint
 
 Point = namedtuple("Point", ["x", "y"])  # Convenience class for coordinates
 
-WIDTH = 256
-HEIGHT = 256
+WIDTH = 128
+HEIGHT = 128
 STAR_COUNT = 200
 
-DRIFTX = cycle([int(i) for i in "0011111122222222233334444333222222222111110000"])
-DRIFTY = cycle([int(i) for i in "443332222222221111100000011111122222222233334"])
+DRIFTX = cycle([int(i) for i in "00000111111111222222222222333344444444333222222222111110000"])
+DRIFTY = cycle([int(i) for i in "444444333222222222221111111000001111112222222233333334"])
 
 ###################
 # The game itself #
@@ -29,7 +29,7 @@ class App:
     def __init__(self):
         """Initiate pyxel, set up initial game variables, and run."""
 
-        pyxel.init(WIDTH, HEIGHT, caption="Dock'er", scale=2, fps=22)
+        pyxel.init(WIDTH, HEIGHT, caption="Dock'er", scale=4, fps=22)
         pyxel.image(1).load(0, 0, 'assets/cockpit.png')
         pyxel.image(0).load(0, 0, 'assets/dock.png')
 
